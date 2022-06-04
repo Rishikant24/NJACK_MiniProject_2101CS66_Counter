@@ -1,0 +1,155 @@
+<html>
+<head>
+<title> COUNTER </title>
+<style>
+
+body{
+		background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+button {
+  background-color: black; 
+   border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 30px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 40px;
+}
+
+button:hover{
+				background-color: red;
+				border: 3px solid black;
+				}
+div{
+			background-color: red;
+			text-align: center;
+			margin: auto;
+			border-radius: 50%; 
+			 height: 230px;
+			width: 20%;
+  }
+  button.increase{
+					padding: 32px;
+					}
+</style>
+<script>
+var x = 0;
+function plus()
+{
+	x++;
+	document.getElementById("circle").innerHTML =  "<br />"+ x ;
+		if(x%10==0)
+	{
+		document.getElementById("circle").style.backgroundColor = "red";
+	}
+		else if(x%10==1)
+	{
+		document.getElementById("circle").style.backgroundColor = "blue";
+	}
+	else if(x%10==2)
+	{
+		document.getElementById("circle").style.backgroundColor = "green";
+	}
+	else if(x%10==3)
+	{
+		document.getElementById("circle").style.backgroundColor = "yellow";
+	}
+	else if(x%10==4)
+	{
+		document.getElementById("circle").style.backgroundColor = "orange";
+	}
+	else if(x%10==5)
+	{
+		document.getElementById("circle").style.backgroundColor = "cyan";
+	}
+	else if(x%10==6)
+	{
+		document.getElementById("circle").style.backgroundColor = "pink";
+	}
+	else if(x%10==7)
+	{
+		document.getElementById("circle").style.backgroundColor = "violet";
+	}else if(x%10==8)
+	{
+		document.getElementById("circle").style.backgroundColor = "magenta";
+	}
+	else if(x%10==9)
+	{
+		document.getElementById("circle").style.backgroundColor = "sky blue";
+	}
+	}
+	
+	function minus()
+{	
+	if(x==0)
+	{
+		window.alert("ERROR!! The counter is already at 0, it cannot go below it");
+	}
+		else
+		{
+			x--;
+			document.getElementById("circle").innerHTML = "<br />" +  x;
+					if(x%10==0)
+	{
+		document.getElementById("circle").style.backgroundColor = "red";
+	}
+		else if(x%10==1)
+	{
+		document.getElementById("circle").style.backgroundColor = "blue";
+	}
+	else if(x%10==2)
+	{
+		document.getElementById("circle").style.backgroundColor = "green";
+	}
+	else if(x%10==3)
+	{
+		document.getElementById("circle").style.backgroundColor = "yellow";
+	}
+	else if(x%10==4)
+	{
+		document.getElementById("circle").style.backgroundColor = "orange";
+	}
+	else if(x%10==5)
+	{
+		document.getElementById("circle").style.backgroundColor = "cyan";
+	}
+	else if(x%10==6)
+	{
+		document.getElementById("circle").style.backgroundColor = "pink";
+	}
+	else if(x%10==7)
+	{
+		document.getElementById("circle").style.backgroundColor = "violet";
+	}else if(x%10==8)
+	{
+		document.getElementById("circle").style.backgroundColor = "magenta";
+	}
+	else if(x%10==9)
+	{
+		document.getElementById("circle").style.backgroundColor = "sky blue";
+	}
+		}
+}
+	
+function re()
+{
+		x=0;
+		document.getElementById("circle").innerHTML = "<br />" +  x;
+		document.getElementById("circle").style.backgroundColor = "red";
+}
+</script>
+</head>
+<body>
+<h1><center><font face="calibri" color="white" size="7">COLOR-CHANGING COUNTER</font><h1>
+<div id ="circle"><p id ="display"><br>0</p></div><br>
+<button id="increase" onclick="plus()"> Increase </button>
+<button id="decrease" onclick="minus()"> Decrease </button><br>
+<button id="reset" onclick="re()">Reset</button>
+</body>
+</html>
+
